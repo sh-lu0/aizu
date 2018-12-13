@@ -6,7 +6,7 @@ while ( !feof(STDIN) ) {
 $lengthSequence = $line[0];
 $numbers = explode(" ", $line[1]);
 
-print(trim(implode(" ",$numbers))."\n");
+print($line[1]."\n");
 
 for ($i = 1; $i < $lengthSequence; $i++) {
     $v = $numbers[$i];
