@@ -14,19 +14,16 @@ for($j=0; $j<$lengthKey; ++$j){
     }
 }
 
-echo $count;
+echo $count . PHP_EOL;
 
 function linearSearch($stdin, $key, $N){
     $i=0;
-    while($stdin[$i] != $key){
+    while((int)$stdin[$i] != (int)$key){
         $i++;
         // NotFound
-        if($i==$N){
+        if($i===$N){
             return 0;
         }
     }
     return 1;
-
 }
-?>
-
