@@ -1,22 +1,32 @@
 <?php
-$lengthA = fgets(STDIN);
-print($lengthA);
+$lengthA = (int) fgets(STDIN);
 $stdinA = explode(" ",fgets(STDIN));
-print_r($stdinA);
-$lengthKey = fgets(STDIN);
-print($lengthKey);
+
+$lengthKey = (int) fgets(STDIN);
 $stdinKey = explode(" ",fgets(STDIN));
-print_r($stdinKey);
 
+$count = 0;
 
+for($j=0; $j<$lengthKey; ++$j){
+    $result = linearSearch($stdinA, $stdinKey[$j], $lengthA);
+    if($result == 1){
+        $count++;
+    }
+}
 
-function linearSearch($stdinA, key){
-    $i = 0;
-    $A[n] = key
-    while A[i] と key が異なる
-      i++
-    if i が n に達した
-      return NOT_FOUND
-    return i
+echo $count;
+
+function linearSearch($stdin, $key, $N){
+    $i=0;
+    while($stdin[$i] != $key){
+        $i++;
+        // NotFound
+        if($i==$N){
+            return 0;
+        }
+    }
+    return 1;
+
 }
 ?>
+
