@@ -1,7 +1,6 @@
 <?php
 $lengthA = (int) fgets(STDIN);
 $stdinA = explode(" ",fgets(STDIN));
-
 $lengthKey = (int) fgets(STDIN);
 $stdinKey = explode(" ",fgets(STDIN));
 
