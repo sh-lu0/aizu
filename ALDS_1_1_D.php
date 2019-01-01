@@ -1,7 +1,7 @@
 <?php
 
-fscanf(STDIN, '%d', $N);
-for ($i = 0; $i < $N; $i++) {
+fscanf(STDIN, '%d', $length);
+for ($i = 0; $i < $length; $i++) {
     fscanf(STDIN, '%d', $R);
     if ($i === 0) {
         $minv = $R;
@@ -11,11 +11,15 @@ for ($i = 0; $i < $N; $i++) {
         $profit = $R - $minv;
         continue;
     }
-    if($maxv < $R-$minv){
+    if($profit < $R-$minv){
         $maxv = $R;
     }
-    if($minv > $R){
+    if($minv>$R){
         $minv = $R;
+    }
+    $result = $maxv-$minv;
+    if($result>$profit){
+        $profit=$result;
     }
 }
 
