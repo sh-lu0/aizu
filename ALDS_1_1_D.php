@@ -1,26 +1,20 @@
 <?php
 
 fscanf(STDIN, '%d', $length);
-for ($i = 0; $i < $length; $i++) {
+$min = 0;
+$result =0;
+for ($i = 0; $i < $length; ++$i) {
     fscanf(STDIN, '%d', $R);
     if ($i === 0) {
-        $minv = $R;
-        continue;
-    } elseif ($i === 1) {
-        $maxv = $R;
-        $profit = $R - $minv;
+        $min = $R;
         continue;
     }
-    if($profit < $R-$minv){
-        $maxv = $R;
+    if ($i > 2) {
+        $result = max($result, $R-$min);
     }
-    if($minv>$R){
-        $minv = $R;
+    else {
+        $result = $R - $min;
     }
-    $result = $maxv-$minv;
-    if($result>$profit){
-        $profit=$result;
-    }
+    $min = min($min, $R);
 }
-
-echo $profit, PHP_EOL;
+echo $result, PHP_EOL;
