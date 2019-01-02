@@ -13,11 +13,7 @@ $bubbleArr = BubbleSort($arr,$N);
 echo(implode(' ',$bubbleArr).PHP_EOL."Stable".PHP_EOL);
 $selectionArr = SelectionSort($arr,$N);
 echo implode(" ",$selectionArr) . PHP_EOL;
-if(isStable($bubbleArr, $selectionArr)==true){
-    echo("Stable".PHP_EOL);
-} else {
-    echo("Not stable".PHP_EOL);
-}
+isStable($bubbleArr, $selectionArr);
 
 function BubbleSort($arr,$N)
 {
@@ -54,8 +50,8 @@ function SelectionSort($arr, $N){
 function isStable($bubbleArr, $selectionArr){
     $result = array_diff_assoc($bubbleArr, $selectionArr);
     if(count($result)==0){
-        return true;
+        echo("Stable".PHP_EOL);
     } else {
-        return false;
+        echo("Not stable".PHP_EOL);
     }
 }
