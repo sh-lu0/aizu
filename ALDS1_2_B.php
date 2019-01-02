@@ -1,3 +1,5 @@
+/*挿入ソート*/
+
 <?php
 $Arraylength = trim(fgets(STDIN));
 $stdins = explode(" ",trim(fgets(STDIN)));

@@ -1,3 +1,5 @@
+/*バブルソート*/
+
 <?php
 $Arraylength = trim(fgets(STDIN));
 $stdins = explode(" ",trim(fgets(STDIN)));
