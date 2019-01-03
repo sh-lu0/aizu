@@ -10,7 +10,9 @@ for($i=0; $i<$length; ++$i){
         break;
     case 'delete':
         $key=array_search($str, $list);
-        unset($list[$key]);
+        if($key !== FALSE){
+            unset($list[$key]);
+        }
         break;
     case 'deleteFirst':
         array_shift($list);
@@ -20,3 +22,5 @@ for($i=0; $i<$length; ++$i){
         break;
     }
 }
+
+echo implode(" ",$list) . PHP_EOL;
