@@ -1,3 +1,5 @@
+/*挿入ソート*/
+
 <?php
 while ( !feof(STDIN) ) {
   $line[] = trim(fgets(STDIN));
