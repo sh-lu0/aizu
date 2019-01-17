@@ -1,6 +1,6 @@
-# aizu
-AizuOnlineJudgeの問題をPHPで解く
+# 競技プログラミングをPHPとCで解く
 [AizuOnlineJudge](http://judge.u-aizu.ac.jp/onlinejudge/index.jsp?lang=ja)
+[AtCoder](https://atcoder.jp/?lang=ja)
 
 ## in_arrayは遅い
 in_array — 配列に値があるかチェックする
