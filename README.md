@@ -1,7 +1,11 @@
-# 競技プログラミングをPHPとCで解く
+## AizuOnlineJudge
 [AizuOnlineJudge](http://judge.u-aizu.ac.jp/onlinejudge/index.jsp?lang=ja)
-[AtCoder](https://atcoder.jp/?lang=ja)
 
+## AtCoder
+[AtCoder](https://atcoder.jp/?lang=ja)
+- 実行時間の制限は各ケースにつき2秒以内
+
+# PHP
 ## in_arrayは遅い
 in_array — 配列に値があるかチェックする
 <http://php.net/manual/ja/function.in-array.php>
@@ -69,3 +73,5 @@ if (array_search("apple", $array) !== FALSE){
     echo “含まれていません”;
     }
 ```
+
+# C
