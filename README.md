@@ -1,16 +1,22 @@
 ## AizuOnlineJudge
+
 [AizuOnlineJudge](http://judge.u-aizu.ac.jp/onlinejudge/index.jsp?lang=ja)
 
 ## AtCoder
+
 [AtCoder](https://atcoder.jp/?lang=ja)
-- 実行時間の制限は各ケースにつき2秒以内
+
+- 実行時間の制限は各ケースにつき 2 秒以内
 
 # PHP
-## in_arrayは遅い
+
+## in_array は遅い
+
 in_array — 配列に値があるかチェックする
 <http://php.net/manual/ja/function.in-array.php>
 
-連想配列にしてissetが早い
+連想配列にして isset が早い
+
 ```
 $array = array(
     'apple',
@@ -19,11 +25,15 @@ $array = array(
     'banana'
 );
 ```
+
 の配列から
+
 ```
 if( in_array( 'orange', $array ) ) { ～ }
 ```
-みたいにin_arrayで検索するなら
+
+みたいに in_array で検索するなら
+
 ```
 $array = array(
     'apple' => true,
@@ -32,17 +42,20 @@ $array = array(
     'banana' => true
 );
 ```
-みたいな連想配列にしてissetを使う．
+
+みたいな連想配列にして isset を使う．
+
 ```
 if( isset( $array['orange'] ) ) { ～ }
 ```
+
 ※ isset は関数ではなく言語構造なので速いらしい
 
-
-配列の追加もarray_mergeは遅い
+配列の追加も array_merge は遅い
 hoge[] = hogehoge;で追加する
 
-## array_searchをif文で使う場合の注意
+## array_search を if 文で使う場合の注意
+
 array_search — 指定した値を配列で検索し、見つかった場合に対応する最初のキーを返す
 <http://php.net/manual/ja/function.array-search.php>
 
@@ -54,7 +67,9 @@ $array = array(
     [3] => banana
 );
 ```
-からappleが含まれるかどうか調べたいとき
+
+から apple が含まれるかどうか調べたいとき
+
 ```
 if (array_search("apple", $array)){
     echo "含まれています";
@@ -62,10 +77,12 @@ if (array_search("apple", $array)){
     echo "含まれていません";
     }
 ```
-とすると，要素0番目のappleを見つけても，0を返してしまうので「含まれていません」が返ってきてしまう．  
-※if文では，int型の0もboolean型のFALSEも，同じFALSEであるため
+
+とすると，要素 0 番目の apple を見つけても，0 を返してしまうので「含まれていません」が返ってきてしまう．  
+※if 文では，int 型の 0 も boolean 型の FALSE も，同じ FALSE であるため
 
 そのため以下のように書く．
+
 ```
 if (array_search("apple", $array) !== FALSE){
     echo “含まれています”;
@@ -75,3 +92,7 @@ if (array_search("apple", $array) !== FALSE){
 ```
 
 # C
+
+`int r = 1<<29`
+INF 値として 1<<29 を使っている
+2 倍してオーバーフローしない中で簡潔に書ける数として競技プログラミングではよく使われるらしい
