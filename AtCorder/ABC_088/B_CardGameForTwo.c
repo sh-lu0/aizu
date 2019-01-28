@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 int desc(const void *a, const void *b) {
   return *(int *)b - *(int *)a;
 }
